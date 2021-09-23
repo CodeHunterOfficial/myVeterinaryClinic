@@ -1,0 +1,75 @@
+2021-09-21 20:52:43.5100 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-21 20:52:43.5369 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-21 20:52:43.6800 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-09-21 20:52:43.6800 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-21 20:52:43.6800 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-21 20:52:43.6800 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-21 20:52:43.6800 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.13.0.1980. Product version: 4.13.0+bde80c6540aad14237e5e24e07e8680a4d177af9. GlobalAssemblyCache: False
+2021-09-21 20:52:43.6884 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll succeeded!
+2021-09-21 20:52:43.6884 Info Message Template Auto Format enabled
+2021-09-21 20:52:43.6884 Info Loading assembly: NLog.Web.AspNetCore
+2021-09-21 20:52:43.7689 Info Adding target FileTarget(Name=alldata)
+2021-09-21 20:52:43.7689 Info Adding target FileTarget(Name=otherFile-web)
+2021-09-21 20:52:43.8200 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.config
+2021-09-21 20:52:43.8563 Info Configuration initialized.
+2021-09-21 20:52:43.8563 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-09-21 21:03:42.6661 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-21 21:03:42.6661 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-21 21:03:42.7011 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-09-21 21:03:42.7042 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-21 21:03:42.7042 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-21 21:03:42.7042 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-21 21:03:42.7042 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.13.0.1980. Product version: 4.13.0+bde80c6540aad14237e5e24e07e8680a4d177af9. GlobalAssemblyCache: False
+2021-09-21 21:03:42.7042 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll succeeded!
+2021-09-21 21:03:42.7042 Info Message Template Auto Format enabled
+2021-09-21 21:03:42.7185 Info Loading assembly: NLog.Web.AspNetCore
+2021-09-21 21:03:42.7770 Info Adding target FileTarget(Name=alldata)
+2021-09-21 21:03:42.7770 Info Adding target FileTarget(Name=otherFile-web)
+2021-09-21 21:03:42.8106 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.config
+2021-09-21 21:03:42.8301 Info Configuration initialized.
+2021-09-21 21:03:42.8301 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-09-22 16:13:40.2585 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-22 16:13:40.3011 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-22 16:13:40.3825 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-09-22 16:13:40.3825 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-22 16:13:40.3825 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-22 16:13:40.3825 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-22 16:13:40.3825 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.13.0.1980. Product version: 4.13.0+bde80c6540aad14237e5e24e07e8680a4d177af9. GlobalAssemblyCache: False
+2021-09-22 16:13:40.3825 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll succeeded!
+2021-09-22 16:13:40.3921 Info Message Template Auto Format enabled
+2021-09-22 16:13:40.3921 Info Loading assembly: NLog.Web.AspNetCore
+2021-09-22 16:13:40.6116 Info Adding target FileTarget(Name=alldata)
+2021-09-22 16:13:40.6116 Info Adding target FileTarget(Name=otherFile-web)
+2021-09-22 16:13:40.6482 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.config
+2021-09-22 16:13:40.7024 Info Configuration initialized.
+2021-09-22 16:13:40.7024 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-09-22 17:21:43.0030 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-22 17:21:43.0030 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-22 17:21:43.0513 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-09-22 17:21:43.0513 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-22 17:21:43.0513 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-22 17:21:43.0513 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-22 17:21:43.0513 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.13.0.1980. Product version: 4.13.0+bde80c6540aad14237e5e24e07e8680a4d177af9. GlobalAssemblyCache: False
+2021-09-22 17:21:43.0513 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll succeeded!
+2021-09-22 17:21:43.0620 Info Message Template Auto Format enabled
+2021-09-22 17:21:43.0620 Info Loading assembly: NLog.Web.AspNetCore
+2021-09-22 17:21:43.1255 Info Adding target FileTarget(Name=alldata)
+2021-09-22 17:21:43.1255 Info Adding target FileTarget(Name=otherFile-web)
+2021-09-22 17:21:43.1574 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.config
+2021-09-22 17:21:43.1782 Info Configuration initialized.
+2021-09-22 17:21:43.1782 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False
+2021-09-22 17:31:36.2383 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-22 17:31:36.2495 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-22 17:31:36.2704 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.3.1580. Product version: 1.7.3+5b992558f6b1c15def05efe3168eb20d7965b82a. GlobalAssemblyCache: False
+2021-09-22 17:31:36.2704 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-22 17:31:36.2737 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-22 17:31:36.2737 Info Loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+2021-09-22 17:31:36.2737 Info NLog.Web.AspNetCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.13.0.1980. Product version: 4.13.0+bde80c6540aad14237e5e24e07e8680a4d177af9. GlobalAssemblyCache: False
+2021-09-22 17:31:36.2737 Info Auto loading assembly file: G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll succeeded!
+2021-09-22 17:31:36.2737 Info Message Template Auto Format enabled
+2021-09-22 17:31:36.2737 Info Loading assembly: NLog.Web.AspNetCore
+2021-09-22 17:31:36.3376 Info Adding target FileTarget(Name=alldata)
+2021-09-22 17:31:36.3376 Info Adding target FileTarget(Name=otherFile-web)
+2021-09-22 17:31:36.3688 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=G:\VeterenalClinicProject\myVeterinaryClinic\myVeterinaryClinic\bin\Debug\netcoreapp3.1\NLog.config
+2021-09-22 17:31:36.3891 Info Configuration initialized.
+2021-09-22 17:31:36.3891 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.11.13229. Product version: 4.7.11+33ed3a9f86277651e93ddf39cda64a046a06778b. GlobalAssemblyCache: False

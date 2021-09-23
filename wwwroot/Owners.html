@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+    <body>
+        <h2>Список хозяев</h2>
+        <form name="ownerForm">
+            <input type="hidden" name="ownerid" value="0" />
+
+            <div class="form-group col-md-5">
+                <label for="fullname">FullName:</label>
+                <input class="form-control" name="fullname" />
+            </div>
+
+            <div class="form-group col-md-5">
+                <label for="gender">Gender:</label>
+                <input class="form-control" name="gender" />
+            </div>
+
+            <div class="form-group col-md-5">
+                <label for="phone">Phone:</label>
+                <input class="form-control" name="phone" />
+            </div>
+
+            <div class="panel-body">
+                <button type="submit" id="submit" class="btn btn-primary">Сохранить</button>
+                <a id="reset" class="btn btn-primary">Сбросить</a>
+            </div>
+        </form>
+        <table class="table table-condensed table-striped  col-md-6">
+            <thead><tr><th>Id</th><th>ФИО</th><th>Пол</th><th> Телефон</th><th></th></tr></thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <script>
+            // Получение всех
+            async function GetOwners() {
+                // отправляет запрос и получаем ответ
+                const response = await fetch("/api/owners", {
+                    method: "GET",
+                    headers: { "Accept": "application/json" }
+                });
+                // если запрос прошел нормально
+                if (response.ok === true) {
+                    // получаем данные
+                    const owners = await response.json();
+                    let rows = document.querySelector("tbody");
+                    owners.forEach(owner => {
+                        // добавляем полученные элементы в таблицу
+                        rows.append(row(owner));
+                    });
+                }
+            }
+
+            // Получение одного пользователя
+            async function GetOwner(id) {
+                const response = await fetch("/api/owners/" + id, {
+                    method: "GET",
+                    headers: { "Accept": "application/json" }
+                });
+                if (response.ok === true) {
+                    const owner = await response.json();
+                   // alert(owner.fullName + owner.gender + owner.phone);
+                    const form = document.forms["ownerForm"];
+                    form.elements["ownerid"].value = owner.ownerId;
+                    form.elements["fullname"].value = owner.fullName;
+                    form.elements["gender"].value = owner.gender;
+                    form.elements["phone"].value = owner.phone;
+                }
+            }
+
+            // Добавление пользователя
+            async function CreateOwner(nfullname, ngender, nphone) {
+
+                const response = await fetch("api/owners", {
+                    method: "POST",
+                    headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        fullName: nfullname,
+                        gender: ngender,
+                        phone: nphone
+                    })
+                });
+                if (response.ok === true) {
+                    const owner = await response.json();
+                    reset();
+                    document.querySelector("tbody").append(row(owner));
+                }
+            }
+
+            async function EditOwner(id, Name, Gender, Phone) {
+                const response = await fetch("api/owners/" + id, {
+                    method: "PUT",
+                    headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        ownerId: parseInt(id, 10),
+                        fullName: Name,
+                        gender: Gender,
+                        phone: Phone
+                    })
+                });
+
+                if (response.ok === true) {
+                    // alert("Ok");
+                    const owner = await response.json();
+                    reset();
+                    document.querySelector("tr[data-rowid='" + owner.ownerId + "']").replaceWith(row(owner));
+                    // alert("Ok123");
+                }
+            }
+
+            // Удаление
+            async function DeleteOwner(id) {
+                const response = await fetch("/api/owners/" + id, {
+                    method: "DELETE",
+                    headers: { "Accept": "application/json" }
+                });
+                if (response.ok === true) {
+                    const owner = await response.json();
+                    document.querySelector("tr[data-rowid='" + owner.ownerId + "']").remove();
+                }
+            }
+
+            // сброс формы
+            function reset() {
+                const form = document.forms["ownerForm"];
+                form.reset();
+                form.elements["ownerid"].value = 0;
+            }
+
+
+
+            // создание строки для таблицы
+            function row(owner) {
+
+                const tr = document.createElement("tr");
+                tr.setAttribute("data-rowid", owner.ownerId);
+
+                const idTd = document.createElement("td");
+                idTd.append(owner.ownerId);
+                tr.append(idTd);
+
+                const fullnameTd = document.createElement("td");
+                fullnameTd.append(owner.fullName);
+                tr.append(fullnameTd);
+
+                const genderTd = document.createElement("td");
+                genderTd.append(owner.gender);
+                tr.append(genderTd);
+
+                const telTd = document.createElement("td");
+                telTd.append(owner.phone);
+                tr.append(telTd);
+
+                const linksTd = document.createElement("td");
+
+                const editLink = document.createElement("a");
+                editLink.setAttribute("data-id", owner.ownerId);
+
+                editLink.setAttribute("style", "cursor:pointer;padding:15px;");
+                editLink.append("Изменить");
+                editLink.addEventListener("click", e => {
+
+                    e.preventDefault();
+                    GetOwner(owner.ownerId);
+
+                });
+                linksTd.append(editLink);
+
+                const removeLink = document.createElement("a");
+                removeLink.setAttribute("data-id", owner.ownerId);
+                removeLink.setAttribute("style", "cursor:pointer;padding:15px;");
+                removeLink.append("Удалить");
+
+                removeLink.addEventListener("click", e => {
+
+                    e.preventDefault();
+                    DeleteOwner(owner.ownerId);
+                });
+
+                linksTd.append(removeLink);
+                tr.appendChild(linksTd);
+
+                return tr;
+            }
+            // сброс значений формы
+            document.getElementById("reset").click(function (e) {
+                e.preventDefault();
+                reset();
+            });
+
+            // отправка формы
+            document.forms["ownerForm"].addEventListener("submit", e => {
+                e.preventDefault();
+                const form = document.forms["ownerForm"];
+                const ownerId = form.elements["ownerid"].value;
+                const fullName = form.elements["fullname"].value;
+                const gender = form.elements["gender"].value;
+                const phone = form.elements["phone"].value;
+                if (ownerId == 0) {
+                    CreateOwner(fullName, gender, phone);
+                }
+                else
+                    EditOwner(ownerId, fullName, gender, phone);
+            });
+
+
+            // загрузка пользователей
+            GetOwners();
+        </script>
+    </body>
+</html>

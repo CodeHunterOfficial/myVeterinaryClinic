@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h2>Список животных</h2>
+    <form name="animalForm">
+       
+        <input type="hidden" name="animalid" value="0" />
+
+        <div class="form-group col-md-5">
+            <label for="name">Name:</label>
+            <input class="form-control" name="name" />
+        </div>
+
+        <div class="form-group col-md-5">
+            <label for="ownerid">OwnerId:</label>
+            <input class="form-control" name="ownerid" />
+        </div>
+
+        <div class="panel-body">
+            <button type="submit" id="submit" class="btn btn-primary">Сохранить</button>
+            <a id="reset" class="btn btn-primary">Сбросить</a>
+        </div>
+    </form>
+
+    <table class="table table-condensed table-striped  col-md-6">
+        <thead><tr><th>Id</th><th>Кличка</th><th>Хозяйн</th><th></th></tr></thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+            // Получение всех
+        async function GetAnimals() {
+                // отправляет запрос и получаем ответ
+                const response = await fetch("/api/animals", {
+                    method: "GET",
+                    headers: { "Accept": "application/json" }
+                });
+                // если запрос прошел нормально
+                if (response.ok) {
+                    // получаем данные
+                    const animals = await response.json();
+                    let rows = document.querySelector("tbody");
+                    animals.forEach(animal => {
+                        // добавляем полученные элементы в таблицу
+                        rows.append(row(animal));
+                    });
+                }
+            }
+
+            // Получение одного пользователя
+           async function GetAnimal(id) {
+                const response = await fetch("/api/animals/" + id, {
+                    method: "GET",
+                    headers: { "Accept": "application/json" }
+                });
+               if (response.ok === true) {
+                 // alert(animal.name);
+                   const animal = await response.json(); 
+                   const form = document.forms["animalForm"];
+                   form.elements["animalid"].value = animal.animalId;
+                   form.elements["name"].value = animal.name;
+                   form.elements["ownerid"].value = animal.ownerId;                   
+                }
+        }
+
+        
+
+
+            // Добавление пользователя
+        async function CreateAnimal(nname, nownerid) {
+             alert("Create ----- 0"+nname+nownerid);
+            const response = await fetch("api/animals", {
+                method: "POST",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: nname,
+                    ownerId: nownerid                    
+                })
+            });
+
+            if (response.ok = true) {
+                 alert("Sag");
+                const animal = await response.json();
+                reset();
+                document.querySelector("tbody").append(row(animal));
+            }
+        }
+        
+
+      
+
+
+
+        async function EditAnimal(Id, Name, Ownerid) {    
+            alert("--Edit");
+            const response = await fetch("api/animals/" + id, {
+                method: "PUT",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    animalId: parseInt(Id, 10),
+                    name: Name,
+                    ownerId: Ownerid
+                })
+            });
+                if (response.ok === true) {
+                    alert("Ok---Edit");
+                    const animal = await response.json();
+                    reset();
+                    document.querySelector("tr[data-rowid='" + animal.animalId + "']").replaceWith(row(animal));
+                    // alert("Ok123");
+                }
+        }
+
+
+            // Удаление
+        async function DeleteAnimal(id) {
+           // alert("123");
+            const response = await fetch("/api/animals/" + id, {
+                method: "DELETE",
+                headers: { "Accept": "application/json" }
+            });
+            if (response.ok === true) {
+                const animal = await response.json();
+                document.querySelector("tr[data-rowid='" + animal.animalId + "']").remove();
+            }
+        }
+
+            // сброс формы
+            function reset() {
+                const form = document.forms["animalForm"];
+                form.reset();
+                form.elements["animalid"].value = 0;
+            }
+
+            // создание строки для таблицы
+            function row(animal) {
+               // alert("Haha");
+                const tr = document.createElement("tr");
+                tr.setAttribute("data-rowid", animal.animalId);
+
+                const idTd = document.createElement("td");
+                idTd.append(animal.animalId);
+                tr.append(idTd);
+
+                const nameTd = document.createElement("td");
+                nameTd.append(animal.name);
+                tr.append(nameTd);
+
+                const ownerIdTd = document.createElement("td");
+                ownerIdTd.append(animal.ownerId);
+                tr.append(ownerIdTd);
+                            
+                const linksTd = document.createElement("td");
+
+                const editLink = document.createElement("a");
+                editLink.setAttribute("data-id", animal.animalId);
+
+                editLink.setAttribute("style", "cursor:pointer;padding:15px;");
+                editLink.append("Изменить");
+                editLink.addEventListener("click", e => {
+                //   alert(animal.animalId + animal.name+animal.ownerId);
+                    e.preventDefault();
+                    GetAnimal(animal.animalId);
+                  //  alert("Edit");
+                });
+                linksTd.append(editLink);
+
+                const removeLink = document.createElement("a");
+                removeLink.setAttribute("data-id", animal.animalId);
+                removeLink.setAttribute("style", "cursor:pointer;padding:15px;");
+                removeLink.append("Удалить");
+
+                removeLink.addEventListener("click", e => {
+                    alert("Delete");
+                    e.preventDefault();
+                    DeleteAnimal(animal.animalId);
+                });
+
+                linksTd.append(removeLink);
+                tr.appendChild(linksTd);
+
+                return tr;
+            }
+            // сброс значений формы
+            document.getElementById("reset").click(function (e) {
+                e.preventDefault();
+                reset();
+            });
+
+           // отправка формы
+        document.forms["animalForm"].addEventListener("submit", e => {
+                e.preventDefault();
+            const form = document.forms["animalForm"];
+            const animalId = form.elements["animalid"].value;
+                const name = form.elements["name"].value;
+                const ownerid = form.elements["ownerid"].value;
+            alert(animalId+name + ownerid);
+            if (animalId == 0) {
+                alert("Create");
+                CreateOwner(name, ownerid);
+            }
+            else {
+                alert("Edit into");
+                EditAnimal(animalId, name, ownerid);
+            }
+            });
+        
+            // загрузка пользователей
+            GetAnimals();
+    </script>
+</body>
+</html>

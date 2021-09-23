@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        html, body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.428571429;
+            height: 100%;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .Wrapper {
+            min-height: 100%;
+            position: relative;
+            border: 5px green solid;
+        }
+        /*Pageheader*/
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 15px;
+            height: 50px;
+            display: table-row;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            background-color: #000000;
+            min-height: 32px !important;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        .navbar-nav > li > a {
+            font-weight: bold !important;
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+        }
+
+        .navbar-nav > li:hover {
+            background-color: green;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px;
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        .footer {
+            background-color:black;
+            color:floralwhite;
+            text-align: center;
+            padding: 5px;
+            height: 30px;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            /*.row.content {
+                height: auto;
+            }*/
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: table;
+            width: 100%;
+        }
+
+        .page-row {
+            display: table-row;
+            height: 1px;
+        }
+
+        .page-row-expanded {
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        function NavigateTo(event,url) {
+            
+            $("#MainContent").load(url);
+            event.preventDefault();
+        }
+    </script>
+</head>
+<body>
+    <header>       
+        <h1 class="text-center">This is header</h1>
+    </header>
+    <nav class="navbar navbar-inverse page-row">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" onclick="NavigateTo(event,'Owners.html')">Owners</a></li>
+                    <li><a href="#" onclick="NavigateTo(event,'Animals.html')">Animals</a></li>
+                    <li><a href="#" onclick="NavigateTo(event,'Doctors.html')">Doctors</a></li>
+                    <li><a href="#" onclick="NavigateTo(event,'Service.html')">Service</a></li>
+                    <li><a href="#" onclick="NavigateTo(event,'Vaccination.html')">Vaccination</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div  class="content" id="MainContent">       
+            <h1>Welcome</h1>
+            <hr>
+            <h3>Test</h3>
+            <p>Lorem ipsum...</p>               
+    </div>
+    <footer class="footer">
+        <div>@Mullosharaf Arabov 2021</div>
+    </footer>
+</body>
+</html>
